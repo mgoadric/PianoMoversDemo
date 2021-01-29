@@ -17,6 +17,10 @@ public class BouncingBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (transform.position.y < -6)
+        {
+            Destroy(gameObject);
+            GameManager.Instance.IncScore(-1);
+        }
     }
 }
